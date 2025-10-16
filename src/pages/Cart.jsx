@@ -18,7 +18,7 @@ const Cart = () => {
       cart.length > 0 ? (
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Cart Items Section */}
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
             <div className="bg-white rounded-lg shadow-md">
               {
@@ -30,7 +30,7 @@ const Cart = () => {
           </div>
 
           {/* Cart Summary Section */}
-          <div className="lg:w-[380px] bg-white rounded-lg shadow-md h-fit p-6">
+          <div className="w-full lg:w-[380px] bg-white rounded-lg shadow-md h-fit p-6">
             <div className="mb-6">
               <h3 className="text-xl font-bold mb-2">Order Summary</h3>
               <div className="h-[1px] w-full bg-gray-200 mb-4"></div>
