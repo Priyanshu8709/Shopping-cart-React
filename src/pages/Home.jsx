@@ -32,20 +32,26 @@ const Home = () => {
   fetchProductData();
   },[])
   return (
-    <div>
+    <div className="min-h-[80vh] w-full">
       {
-        loading ? <Loader/> : 
-        posts.length>0 ?
-        (<div className="grid grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 space-x-5 min-h-[80vh]">
-          {
-            posts.map((post) => (
-              <Product key={post.id} post={post} />
-            ))
-          }
-        </div>) : 
-        (<div className="flex justify-centeritem-center">
-        <p>No Data Found</p>  
-        </div>)
+        loading ? (
+          <div className="min-h-[80vh] w-full flex justify-center items-center">
+            <Loader />
+          </div>
+        ) : 
+        posts.length > 0 ? (
+          <div className="grid grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 space-x-5 min-h-[80vh]">
+            {
+              posts.map((post) => (
+                <Product key={post.id} post={post} />
+              ))
+            }
+          </div>
+        ) : (
+          <div className="flex justify-center items-center min-h-[80vh]">
+            <p>No Data Found</p>  
+          </div>
+        )
       }
     </div>
   );

@@ -12,7 +12,7 @@ const Navbar = () => {
         <NavLink to="/">
           <div className="ml-2 md:ml-5">
             <img 
-              src="/shoppers-logo.png" 
+              src={process.env.PUBLIC_URL + "/shoppers-logo.png"}
               alt="Shoppers Logo" 
               className="h-20 md:h-28 w-auto object-contain object-[25%_50%] scale-150"
               style={{ 
